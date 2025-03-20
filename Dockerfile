@@ -20,6 +20,7 @@ ENV RAILS_ENV="development" \
 
 # Copiar el archivo de Gems y luego instalarlas
 COPY Gemfile Gemfile.lock ./
+RUN gem install bundler -v '~> 2.6'
 RUN bundle install
 
 # Copiar el código de la aplicación
